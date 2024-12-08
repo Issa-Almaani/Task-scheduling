@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+  <header>
+    <h1>Task Manager</h1>
+    <button class="menu-btn">☰</button>
+  </header>
+  <main>
+    <input type="text" id="search-task" placeholder="Search Tasks">
+    <select id="sort-tasks">
+      <option value="default">Sort by</option>
+      <option value="priority">Priority</option>
+      <option value="date">Date</option>
+    </select>
+    <h2>Task List</h2>
+    <div class="task-list"></div>
+    <button class="add-task-btn">+ Add Task</button>
+
+    <div class="task-modal hidden">
+      <div class="modal-content">
+        <h3>Add / Edit Task</h3>
+        <input type="text" id="task-name" placeholder="Task Name">
+        <input type="date" id="task-date">
+        <select id="task-priority">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <button id="save-task">Save Task</button>
+        <button id="cancel-task">Cancel</button>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
